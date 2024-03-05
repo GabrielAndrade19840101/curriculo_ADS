@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: rgb(204, 244, 245); /* Cor de fundo azul para o corpo todo */
+            background-color: rgb(135, 188, 245); /* Cor de fundo azul para o corpo todo */
         }
         .container {
             max-width: 800px;
@@ -18,13 +18,17 @@
             text-align: center;
         }
         h2 {
-            color: #000106d7;
+            color: #000107d7;
         }
         .section {
             margin-top: 20px;
         }
         .experience, .education {
             margin-left: 20px;
+        }
+        /* Estilo para mudar a cor quando o mouse passa sobre os itens */
+        .hoverable:hover {
+            color: red; /* Muda a cor para vermelho */
         }
     </style>
 </head>
@@ -34,15 +38,15 @@
         <section class="personal-info">
             <h2>Informações Pessoais</h2>
             <p><strong>Foto:</strong></p>
-<img src="minhafoto.jpg" alt="Minha Foto" style="width:100px; height:auto;">
-            <p><strong>Nome:</strong> Gabriel Andrade</p>
-            <p><strong>Email:</strong> gabriel.andrade21@fatec.sp.gov.br</p>
-            <p><strong>Telefone:</strong> (17) 98208-3518</p>
-            <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/gabriel-ramos-lopez-andrade-a1a5b7248/</p>
-            <p><strong>Github:</strong> github.com/GabrielAndrade19840101</p>
+            <img src="minhafoto.jpg" alt="Minha Foto" style="width:100px; height:auto;">
+            <p><strong>Nome:</strong> <span id="nomeClicavel" class="hoverable">Gabriel Andrade</span></p>
+            <p><strong>Email:</strong> <span id="emailClicavel" class="hoverable">gabriel.andrade21@fatec.sp.gov.br</span></p>
+            <p><strong>Telefone:</strong> <span id="telefoneClicavel" class="hoverable">(17) 98208-3518</span></p>
+            <p><strong>LinkedIn:</strong> <span id="linkedinClicavel" class="hoverable">https://www.linkedin.com/in/gabriel-ramos-lopez-andrade-a1a5b7248/</span></p>
+            <p><strong>Github:</strong> <span id="githubClicavel" class="hoverable">github.com/GabrielAndrade19840101</span></p>
         </section>
-        
-        <section class="education">
+
+    <section class="education">
             <h2>Educação</h2>
             <div>
                 <h3>Análise e Desenvolvimento de Sistemas</h3>
@@ -78,6 +82,25 @@
             </div>
         </section>
     </div>
+
+    </div>
+    <script>
+        document.getElementById('nomeClicavel').addEventListener('click', function() {
+            window.alert('Oi! Você não vai se arrepender de me contratar!');
+        });
+        document.getElementById('emailClicavel').addEventListener('click', function() {
+            window.alert('Entre em contato via E-mail!');
+        });
+        document.getElementById('telefoneClicavel').addEventListener('click', function() {
+            window.alert('Esse telefone também é WhatsApp!');
+        });
+        document.getElementById('linkedinClicavel').addEventListener('click', function() {
+            window.alert('Visite meu LinkedIn para mais informações!');
+        });
+        document.getElementById('githubClicavel').addEventListener('click', function() {
+            window.alert('Confira meus projetos no GitHub!');
+        });
+    </script>
 </body>
 </html>
 ```
