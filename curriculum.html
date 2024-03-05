@@ -1,63 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo ADS</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Estilos customizados -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: rgb(135, 188, 245); /* Cor de fundo azul para o corpo todo */
+            background-color: #1E1E2E; /* Cor de fundo mais escura */
+            color: #E1E1E6; /* Cor do texto clara */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .container {
             max-width: 800px;
-            margin: auto;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #252540; /* Fundo do container */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra leve */
         }
-        h1, h2 {
-            text-align: center;
+        .section-title {
+            color: #4E9CAF; /* Cor de destaque */
+            border-bottom: 2px solid #4E9CAF; /* Linha de destaque */
+            margin-bottom: 20px;
+            padding-bottom: 5px;
         }
-        h2 {
-            color: #000107d7;
+        a.hoverable:hover {
+            color: #78E08F; /* Muda a cor para verde claro */
+            text-decoration: none; /* Remove o sublinhado */
         }
-        .section {
-            margin-top: 20px;
+        .info-item {
+            margin-bottom: 10px; /* Espaçamento entre itens */
         }
-        .experience, .education {
-            margin-left: 20px;
+        .info-label {
+            font-weight: bold;
         }
-        /* Estilo para mudar a cor quando o mouse passa sobre os itens */
-        .hoverable:hover {
-            color: red; /* Muda a cor para vermelho */
-        }
+        /* Mais estilização conforme necessário */
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Currículo</h1>
-        <section class="personal-info">
-            <h2>Informações Pessoais</h2>
-            <p><strong>Foto:</strong></p>
-            <img src="minhafoto.jpg" alt="Minha Foto" style="width:100px; height:auto;">
-            <p><strong>Nome:</strong> <span id="nomeClicavel" class="hoverable">Gabriel Andrade</span></p>
-            <p><strong>Email:</strong> <span id="emailClicavel" class="hoverable">gabriel.andrade21@fatec.sp.gov.br</span></p>
-            <p><strong>Telefone:</strong> <span id="telefoneClicavel" class="hoverable">(17) 98208-3518</span></p>
-            <p><strong>LinkedIn:</strong> <span id="linkedinClicavel" class="hoverable">https://www.linkedin.com/in/gabriel-ramos-lopez-andrade-a1a5b7248/</span></p>
-            <p><strong>Github:</strong> <span id="githubClicavel" class="hoverable">github.com/GabrielAndrade19840101</span></p>
+        <h1 class="text-center mb-5">Currículo</h1>
+
+        <!-- Informações Pessoais -->
+        <section class="personal-info mb-5">
+            <h2 class="section-title">Informações Pessoais</h2>
+            <img src="https://media.licdn.com/dms/image/D4E35AQGhd_qy8LqQ4g/profile-framedphoto-shrink_800_800/0/1696322471242?e=1710255600&v=beta&t=BPfJ8wTGJCb0NTVYzMNT14I8qczAnEa-hvM3lO4EDMs" alt="Minha Foto" class="rounded-circle mb-3" style="width:100px; height:auto;">
+            <!-- Informações com ícones do Bootstrap para visual melhor -->
+            <div class="info-item"><span class="info-label">Nome:</span> Gabriel Andrade</div>
+            <div class="info-item"><span class="info-label">Email:</span> gabriel.andrade21@fatec.sp.gov.br</div>
+            <div class="info-item"><span class="info-label">Telefone:</span> (17) 98208-3518</div>
+            <div class="info-item"><span class="info-label">LinkedIn:</span> <a href="https://www.linkedin.com/in/gabriel-ramos-lopez-andrade-a1a5b7248/" class="hoverable">Meu LinkedIn</a></div>
+            <div class="info-item"><span class="info-label">Github:</span> <a href="https://github.com/GabrielAndrade19840101" class="hoverable">Meu GitHub</a></div>
         </section>
 
-    <section class="education">
-            <h2>Educação</h2>
+        <!-- Educação -->
+        <section class="education mb-5">
+            <h2 class="section-title">Educação</h2>
             <div>
-                <h3>Análise e Desenvolvimento de Sistemas</h3>
-                <p><strong>FATEC:</strong> FATEC - Jales , SP - Brasil Professor Camargo Arruda</p>
-                <p><strong>Data de Conclusão:</strong> Mês/Ano</p>
-                <p><strong>Descrição:</strong> Breve descrição sobre o curso, projetos relevantes, trabalhos, etc.</p>
+                <h3>Análise e Desenvolvimento de Sistemas - FATEC Jales</h3>
+                <div><span class="info-label">Data de Conclusão:</span> Mês/Ano</div>
+                <div><span class="info-label">Descrição:</span> Breve descrição sobre o curso, projetos relevantes, trabalhos, etc.</div>
             </div>
         </section>
         
-        <section class="skills">
-            <h2>Habilidades</h2>
+        <!-- Habilidades -->
+        <section class="skills mb-5">
+            <h2 class="section-title">Habilidades</h2>
             <ul>
                 <li>Programação: Java, Python, HTML, CSS, JavaScript</li>
                 <li>Bancos de Dados: MySQL, MongoDB</li>
@@ -66,42 +77,16 @@
             </ul>
         </section>
         
+        <!-- Experiência -->
         <section class="experience">
-            <h2>Experiência</h2>
-            <div>
-                <h3>Estágio/Projeto 1</h3>
-                <p><strong>Empresa/Instituição:</strong> Nome da Empresa</p>
-                <p><strong>Período:</strong> Mês/Ano - Mês/Ano</p>
-                <p><strong>Descrição:</strong> Descreva suas responsabilidades, tarefas realizadas e tecnologias utilizadas.</p>
-            </div>
-            <div class="experience">
-                <h3>Estágio/Projeto 2</h3>
-                <p><strong>Empresa/Instituição:</strong> Nome da Empresa</p>
-                <p><strong>Período:</strong> Mês/Ano - Mês/Ano</p>
-                <p><strong>Descrição:</strong> Descreva suas responsabilidades, tarefas realizadas e tecnologias utilizadas.</p>
-            </div>
+            <h2 class="section-title">Experiência</h2>
+            <!-- Adicionar detalhes da experiência aqui -->
         </section>
     </div>
 
-    </div>
-    <script>
-        document.getElementById('nomeClicavel').addEventListener('click', function() {
-            window.alert('Oi! Você não vai se arrepender de me contratar!');
-        });
-        document.getElementById('emailClicavel').addEventListener('click', function() {
-            window.alert('Entre em contato via E-mail!');
-        });
-        document.getElementById('telefoneClicavel').addEventListener('click', function() {
-            window.alert('Esse telefone também é WhatsApp!');
-        });
-        document.getElementById('linkedinClicavel').addEventListener('click', function() {
-            window.alert('Visite meu LinkedIn para mais informações!');
-        });
-        document.getElementById('githubClicavel').addEventListener('click', function() {
-            window.alert('Confira meus projetos no GitHub!');
-        });
-    </script>
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-```
-
